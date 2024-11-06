@@ -15,6 +15,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Create src Directory
+      run: mkdir -p src
+
     - name: Fetch Questions from OpenAI
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
